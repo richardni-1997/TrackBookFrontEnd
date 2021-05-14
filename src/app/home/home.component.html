@@ -1,0 +1,20 @@
+<button mat-button [matMenuTriggerFor]="aboveMenu">Goals</button>
+<mat-menu #aboveMenu="matMenu" yPosition="above">
+  <button mat-menu-item>Add Goal</button>
+  <button mat-menu-item>Goal List</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="belowMenu">PaymentInfo</button>
+<mat-menu #belowMenu="matMenu" yPosition="below">
+  <button mat-menu-item>AddPayment</button>
+  <button mat-menu-item>PaymentList</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="beforeMenu">User</button>
+<mat-menu #beforeMenu="matMenu" xPosition="before">
+  <button mat-menu-item>Sign Up</button>
+  <button mat-menu-item>Login</button>
+</mat-menu>
+
+
+<button mat-button routerLink="">Home</button>
