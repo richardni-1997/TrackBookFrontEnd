@@ -1,7 +1,14 @@
+<<<<<<< HEAD
  <button mat-button [matMenuTriggerFor]="aboveMenu">Goals</button>
 <mat-menu #aboveMenu="matMenu" yPosition="above">
   <button mat-menu-item routerLink="/goals/newgoal">Add Goal</button>
   <button mat-menu-item>Goal List</button>
+=======
+<button mat-button [matMenuTriggerFor]="aboveMenu">Goals</button>
+<mat-menu #aboveMenu="matMenu" yPosition="above">
+  <button mat-menu-item>Add Goal</button>
+  <button mat-menu-item routerLink="/goals">Goal List</button>
+>>>>>>> 40f9c88796efd95c1d6cac9628a7f29d088e37eb
 </mat-menu>
 
 <button mat-button [matMenuTriggerFor]="belowMenu">PaymentInfo</button>
@@ -16,6 +23,7 @@
   <button mat-menu-item>Login</button>
 </mat-menu>
 
+<<<<<<< HEAD
 <button mat-button routerLink="/goalsChart">Goals Chart</button>
 
   
@@ -31,3 +39,9 @@
 
  <router-outlet></router-outlet>
 
+=======
+
+<button mat-button routerLink="">Home</button>
+
+<router-outlet></router-outlet>
+>>>>>>> 40f9c88796efd95c1d6cac9628a7f29d088e37eb

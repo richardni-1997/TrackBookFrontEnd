@@ -10,13 +10,14 @@ import { NewuserComponent } from './home/newuser/newuser.component';
 import { AddpayinfoComponent } from './paymentinfo/addpayinfo/addpayinfo.component';
 import { EditpayinfoComponent } from './paymentinfo/editpayinfo/editpayinfo.component';
 import { PaymentinfoComponent } from './paymentinfo/paymentinfo.component';
+import { ResolverService } from './services/resolver.service';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'goalsChart', component: GoalchartComponent},
   {path: 'goals', component: GoalComponent},
   {path: 'goals/newgoal', component: AddgoalComponent},
-  {path: 'goals/edit/:id', component: EditGoalComponent},
+  {path: 'goals/:id', component: EditGoalComponent},
   {path: 'paymentinfo', component: PaymentinfoComponent},
   {path: 'paymentinfo/newpayinfo', component: AddpayinfoComponent},
   {path: 'paymentinfo/edit/:id', component: EditpayinfoComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [ResolverService]
 })
 export class AppRoutingModule { }
