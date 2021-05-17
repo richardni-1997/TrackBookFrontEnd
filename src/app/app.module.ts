@@ -14,8 +14,15 @@ import { EditGoalComponent } from './goal/edit-goal/edit-goal.component';
 import { EditpayinfoComponent } from './paymentinfo/editpayinfo/editpayinfo.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './shared/material.module';
 import { MatButtonModule } from '@angular/material/button';
-import { MatMenuModule } from '@angular/material/menu'
+import { MatMenuModule } from '@angular/material/menu';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InputerrorComponent } from './error/inputerror/inputerror.component';
+import { GoalchartComponent } from './goalchart/goalchart.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+
 
 @NgModule({
   declarations: [
@@ -28,15 +35,21 @@ import { MatMenuModule } from '@angular/material/menu'
     AddpayinfoComponent,
     NewuserComponent,
     EditGoalComponent,
-    EditpayinfoComponent
+    EditpayinfoComponent,
+    InputerrorComponent,
+    GoalchartComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    MatMenuModule,
-    MatButtonModule,
+    MaterialModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

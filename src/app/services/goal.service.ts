@@ -1,9 +1,39 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class GoalService {
+  private baseUrl = 'http://localhost:8081/api/goals';
+  constructor(private http: HttpClient) { }
 
-  constructor() { }
+  getAll(): Observable<any> {
+    return this.http.get(`${this.baseUrl}`);
+  }
+
+  get(id): Observable<any> {
+    return this.http.get(`${this.baseUrl}/${id}`);
+  }
+
+  createGoal(data): Observable<any> {
+    return this.http.post(`${this.baseUrl}`, data);
+  }
+
+  updateGoal(id,data): Observable<any> {
+    return this.http.put(`${this.baseUrl}/${id}`, data);
+  }
+
+  delete(id): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/${id}`);
+  }
+
+  deleteAll(): Observable<any> {
+    return this.delete(`${this.baseUrl}`);
+  }
+
+ 
 }
