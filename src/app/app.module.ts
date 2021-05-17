@@ -15,7 +15,9 @@ import { EditpayinfoComponent } from './paymentinfo/editpayinfo/editpayinfo.comp
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
-import { MatMenuModule } from '@angular/material/menu'
+import { MatMenuModule } from '@angular/material/menu';
+import { MatTableModule } from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { MatMenuModule } from '@angular/material/menu'
     BrowserAnimationsModule,
     MatMenuModule,
     MatButtonModule,
+    MatTableModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
