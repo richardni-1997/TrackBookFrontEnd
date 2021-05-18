@@ -1,6 +1,32 @@
+<<<<<<< HEAD
 <div class="addgoal-component" style="width: 500px; margin: auto;"> 
 <h3>Welcome to TrackBook a division of SpyGlass!<br> <br></h3>
   <h4>Let's get started!</h4> 
+=======
+<<<<<<< HEAD
+<br>
+<div>
+  <img mat-card-image src="../assets/moneyplant.jpg" alt="Photo of a money tree"
+  class="float-left">
+  <h1>Welcome</h1> to TrackBook, a division of SpyGlass!
+</div>
+=======
+<<<<<<< HEAD
+<!-- <button mat-button [matMenuTriggerFor]="aboveMenu">Goals</button>
+<mat-menu #aboveMenu="matMenu" yPosition="above">
+  <button mat-menu-item routerLink="/goals/newgoal">Add Goal</button>
+  <button mat-menu-item>Goal List</button>
+</mat-menu>
+=======
+<table mat-table
+       [dataSource]="dataSource" multiTemplateDataRows
+       class="mat-elevation-z8">
+  <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
+    <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+    <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+  </ng-container>
+>>>>>>> 40f9c88796efd95c1d6cac9628a7f29d088e37eb
+>>>>>>> e5c8ff90c059f0039fbda4eab50f13492f4d4e1f
 
         <mat-form-field>
           <mat-label>Target Savings </mat-label>
@@ -26,6 +52,7 @@
         </div> -->
     
 
+<<<<<<< HEAD
    
       <h5>Savings Plan</h5>
       <!-- <div class="button-container" *ngIf="!monthPlan"> -->
@@ -57,3 +84,25 @@
   </div>
   
  
+=======
+<<<<<<< HEAD
+<button mat-button [matMenuTriggerFor]="beforeMenu">User</button>
+<mat-menu #beforeMenu="matMenu" xPosition="before">
+  <button mat-menu-item>Sign Up</button>
+  <button mat-menu-item>Login</button>
+</mat-menu>
+
+
+<button mat-button routerLink="">Home</button> -->
+=======
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+  <tr mat-row *matRowDef="let element; columns: columnsToDisplay;"
+      class="example-element-row"
+      [class.example-expanded-row]="expandedElement === element"
+      (click)="expandedElement = expandedElement === element ? null : element">
+  </tr>
+  <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+</table>
+>>>>>>> 40f9c88796efd95c1d6cac9628a7f29d088e37eb
+>>>>>>> db92058f54b6d05ec40228847d57b4762a0891ff
+>>>>>>> e5c8ff90c059f0039fbda4eab50f13492f4d4e1f
