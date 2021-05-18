@@ -99,5 +99,18 @@
   <button (click)="deleteGoal()">Delete</button></td>
 </tr>
 
+
+<div style="width: 500px; margin: auto;" >
+  <br><br><br><br><br><br>
+             
+  <mat-card-content>
+    <mat-progress-bar mode="determinate" value="{{displayCurrentProgress(currentGoal.currentSavings, currentGoal.targetSavings)}}"></mat-progress-bar>
+    <br><br>
+                <span style="float: center;">Saved: {{currentGoal.currentSavings | currency:'USD'}} </span>
+                <span style="float: center;">Target: {{currentGoal.targetSavings | currency:'USD'}}</span>
+                <br>
+</mat-card-content>
+</div>
+
 <div *ngIf = message>{{message}}</div>
 </table>

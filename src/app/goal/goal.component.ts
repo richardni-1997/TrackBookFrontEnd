@@ -85,5 +85,8 @@ export class GoalComponent implements OnInit {
           console.log(error);
         }
       )};
+      private displayCurrentProgress(current, total){
+        return Number(current / total) * 100 ;
+      }
 
 }

@@ -17,17 +17,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
-<<<<<<< HEAD
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { InputerrorComponent } from './error/inputerror/inputerror.component';
+
 import { GoalchartComponent } from './goalchart/goalchart.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
-=======
-import { MatTableModule } from '@angular/material/table';
-import { HttpClientModule } from '@angular/common/http';
->>>>>>> 40f9c88796efd95c1d6cac9628a7f29d088e37eb
+//import { MatTableModule } from '@angular/material/table';
+//import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,7 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     NewuserComponent,
     EditGoalComponent,
     EditpayinfoComponent,
-    InputerrorComponent,
+    
     GoalchartComponent
 
   ],
@@ -50,18 +47,15 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-<<<<<<< HEAD
     MaterialModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     NgxChartsModule
-=======
-    MatMenuModule,
-    MatButtonModule,
-    MatTableModule,
-    HttpClientModule
->>>>>>> 40f9c88796efd95c1d6cac9628a7f29d088e37eb
+    
+    
+    
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

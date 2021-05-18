@@ -1,126 +1,88 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-  description: string;
-}
-const ELEMENT_DATA: PeriodicElement[] = [
-  {
-    position: 1,
-    name: 'Hydrogen',
-    weight: 1.0079,
-    symbol: 'H',
-    description: `Hydrogen is a chemical element with symbol H and atomic number 1. With a standard
-        atomic weight of 1.008, hydrogen is the lightest element on the periodic table.`
-  }, {
-    position: 2,
-    name: 'Helium',
-    weight: 4.0026,
-    symbol: 'He',
-    description: `Helium is a chemical element with symbol He and atomic number 2. It is a
-        colorless, odorless, tasteless, non-toxic, inert, monatomic gas, the first in the noble gas
-        group in the periodic table. Its boiling point is the lowest among all the elements.`
-  }, {
-    position: 3,
-    name: 'Lithium',
-    weight: 6.941,
-    symbol: 'Li',
-    description: `Lithium is a chemical element with symbol Li and atomic number 3. It is a soft,
-        silvery-white alkali metal. Under standard conditions, it is the lightest metal and the
-        lightest solid element.`
-  }, {
-    position: 4,
-    name: 'Beryllium',
-    weight: 9.0122,
-    symbol: 'Be',
-    description: `Beryllium is a chemical element with symbol Be and atomic number 4. It is a
-        relatively rare element in the universe, usually occurring as a product of the spallation of
-        larger atomic nuclei that have collided with cosmic rays.`
-  }, {
-    position: 5,
-    name: 'Boron',
-    weight: 10.811,
-    symbol: 'B',
-    description: `Boron is a chemical element with symbol B and atomic number 5. Produced entirely
-        by cosmic ray spallation and supernovae and not by stellar nucleosynthesis, it is a
-        low-abundance element in the Solar system and in the Earth's crust.`
-  }, {
-    position: 6,
-    name: 'Carbon',
-    weight: 12.0107,
-    symbol: 'C',
-    description: `Carbon is a chemical element with symbol C and atomic number 6. It is nonmetallic
-        and tetravalent—making four electrons available to form covalent chemical bonds. It belongs
-        to group 14 of the periodic table.`
-  }, {
-    position: 7,
-    name: 'Nitrogen',
-    weight: 14.0067,
-    symbol: 'N',
-    description: `Nitrogen is a chemical element with symbol N and atomic number 7. It was first
-        discovered and isolated by Scottish physician Daniel Rutherford in 1772.`
-  }, {
-    position: 8,
-    name: 'Oxygen',
-    weight: 15.9994,
-    symbol: 'O',
-    description: `Oxygen is a chemical element with symbol O and atomic number 8. It is a member of
-         the chalcogen group on the periodic table, a highly reactive nonmetal, and an oxidizing
-         agent that readily forms oxides with most elements as well as with other compounds.`
-  }, {
-    position: 9,
-    name: 'Fluorine',
-    weight: 18.9984,
-    symbol: 'F',
-    description: `Fluorine is a chemical element with symbol F and atomic number 9. It is the
-        lightest halogen and exists as a highly toxic pale yellow diatomic gas at standard
-        conditions.`
-  }, {
-    position: 10,
-    name: 'Neon',
-    weight: 20.1797,
-    symbol: 'Ne',
-    description: `Neon is a chemical element with symbol Ne and atomic number 10. It is a noble gas.
-        Neon is a colorless, odorless, inert monatomic gas under standard conditions, with about
-        two-thirds the density of air.`
-  },
-];
+import { GoalService } from '../services/goal.service';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-greeting',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
-  animations: [
-    trigger('detailExpand', [
-      state('collapsed', style({height: '0px', minHeight: '0'})),
-      state('expanded', style({height: '*'})),
-      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
-    ]),
-  ],
+  styleUrls: ['./home.component.css']
 })
-
-
 export class HomeComponent implements OnInit {
 
-  dataSource = ELEMENT_DATA;
-  columnsToDisplay = ['name', 'weight', 'symbol', 'position'];
-  expandedElement: PeriodicElement | null;
-
-  constructor() { }
-
-  isLoggedIn: boolean;
+ 
+  targetDate: Date;
+  monthlySavings: number;
+  targetSavings: number;
+  biWeeklySavings: number;
+  monthPlan:  boolean = false;
+  biweekPlan: boolean = false;
+  presentDay = new Date();
   
+  duration: number;
+  
+  
+
+  
+
+ 
+  constructor(private goalService: GoalService) { }
+
   ngOnInit(): void {
   }
-
-  login(){
-
+//Monthly Savings given a target amount and date
+  monthlyPlan(): void {
+    //console.log("month")
+    
+    this.monthPlan = true;
+    var m1=this.targetDate.getMonth();
+    console.log(m1);
+    console.log(this.targetDate.getMonth());
+    // duration = (Number(this.targetDate) - Number(this.presentDay));
+    this.duration = this.targetDate.getMonth() - this.presentDay.getMonth();
+   console.log(this.duration);
+    this.monthlySavings = this.targetSavings / (this.duration);
+    console.log(this.monthlySavings);
   }
-  logOut(){
 
+  biWeeklyPlan(): void {
+    console.log("week")
+    this.biweekPlan = true;
+    console.log(this.targetDate);
+    console.log(this.presentDay);
+    let duration = (((Number(this.targetDate) - Number(this.presentDay)))/7)*2;
+    console.log(duration);
+    this.biWeeklySavings = this.targetSavings/ duration;
+    console.log(this.biWeeklySavings);
+  }
+//clear values and button upon reset 
+   clear(){
+    this.targetDate = null;
+    this.targetSavings = 0;
+    this.monthPlan = false;
+    this.biweekPlan = false;
   }
 
+//   today = new Date();
+// past = new Date(this.targetDate); // remember this is equivalent to 06 01 2010
+//dates in js are counted from 0, so 05 is june
+
+//  calcDate(date1,date2) {
+//     var diff = Math.floor(date1.getTime() - date2.getTime());
+//     var day = 1000 * 60 * 60 * 24;
+
+//     var days = Math.floor(diff/day);
+//     var months = Math.floor(days/31);
+//     var years = Math.floor(months/12);
+
+//     var message = date2.toDateString();
+//     message += " was "
+//     message += days + " days " 
+//     message += months + " months "
+//     message += years + " years ago \n"
+
+//     return message
+//     }
+
+
+// /a = calcDate(today,past)
+// /console.log() // returns Tue Jun 01 2010 was 1143 days 36 months 3 years ago
 }

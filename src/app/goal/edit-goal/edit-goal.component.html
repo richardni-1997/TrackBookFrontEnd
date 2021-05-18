@@ -1,3 +1,4 @@
+<div class="addgoal-component" style="width: 500px; margin: auto;"> 
 <h2>Edit Goal</h2>
 <form *ngIf="currentGoal">    
     <!-- <label>Goal Id:</label><br>
@@ -16,14 +17,14 @@
 
     <label>Start Date:</label><br>
     <mat-form-field appearance="fill">
-      <input matInput type="datetime-local"
+      <input matInput type="date"
       [(ngModel)]="currentGoal.startDate"
       name="startDate">
     </mat-form-field><br>
 
     <label>Target Date:</label><br>
     <mat-form-field appearance="fill">
-      <input matInput type="datetime-local"
+      <input matInput type="date"
       [(ngModel)]="currentGoal.targetDate"
       name="targetDate">
     </mat-form-field><br>
