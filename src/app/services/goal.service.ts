@@ -12,6 +12,8 @@ export class GoalService {
 
   constructor(private http: HttpClient) { }
 
+  filterBy: string;
+
   getAll(): Observable<any> {
     return this.http.get(baseUrl);
   }

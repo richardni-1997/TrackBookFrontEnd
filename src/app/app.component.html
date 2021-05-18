@@ -4,12 +4,6 @@
   <button mat-menu-item routerLink="/goals">Goal List</button>
 </mat-menu>
 
-<button mat-button [matMenuTriggerFor]="belowMenu">PaymentInfo</button>
-<mat-menu #belowMenu="matMenu" yPosition="below">
-  <button mat-menu-item>AddPayment</button>
-  <button mat-menu-item>PaymentList</button>
-</mat-menu>
-
 <button mat-button [matMenuTriggerFor]="beforeMenu">User</button>
 <mat-menu #beforeMenu="matMenu" xPosition="before">
   <button mat-menu-item>Sign Up</button>
