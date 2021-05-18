@@ -16,6 +16,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu'
+import { SharedModule } from './shared/shared.module';
+import { AuthModule } from './auth/auth.module';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+// import { GoalchartComponent } from './goalchart/goalchart.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,8 @@ import { MatMenuModule } from '@angular/material/menu'
     AddpayinfoComponent,
     NewuserComponent,
     EditGoalComponent,
-    EditpayinfoComponent
+    EditpayinfoComponent,
+    // GoalchartComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +43,10 @@ import { MatMenuModule } from '@angular/material/menu'
     BrowserAnimationsModule,
     MatMenuModule,
     MatButtonModule,
+    SharedModule,
+    AuthModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

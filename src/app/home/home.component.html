@@ -12,8 +12,10 @@
 
 <button mat-button [matMenuTriggerFor]="beforeMenu">User</button>
 <mat-menu #beforeMenu="matMenu" xPosition="before">
-  <button mat-menu-item>Sign Up</button>
-  <button mat-menu-item>Login</button>
+  <button mat-menu-item [routerLink]="['register']" 
+    routerLinkActive="active">Sign Up</button>
+  <button mat-menu-item [routerLink]="['login']" 
+    routerLinkActive="active">Login</button>
 </mat-menu>
 
 

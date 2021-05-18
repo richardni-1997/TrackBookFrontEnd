@@ -5,14 +5,12 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
-
-  private baseUrl = 'http://localhost:8081/api/users';
+export class GoalschartService  {
+private baseUrl= 'http://localhost:8081/api/goals';
   constructor(private http: HttpClient) { }
 
-  createUser(data): Observable<any> {
-    return this.http.post(`${this.baseUrl}`, data);
+  getGoals(): Observable<any> {
+    return this.http.get(`${this.baseUrl}`);
   }
-
-
-}
+    
+  }
