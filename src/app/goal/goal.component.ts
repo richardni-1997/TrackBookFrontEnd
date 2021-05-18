@@ -56,7 +56,7 @@ export class GoalComponent implements OnInit{
     this.filterBy(value);
   }
   applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
+    let filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 

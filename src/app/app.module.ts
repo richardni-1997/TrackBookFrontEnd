@@ -17,23 +17,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
-<<<<<<< HEAD
-import { HttpClientModule } from '@angular/common/http';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputerrorComponent } from './error/inputerror/inputerror.component';
 import { GoalchartComponent } from './goalchart/goalchart.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
-=======
+
 import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
-<<<<<<< HEAD
-import { FormsModule } from '@angular/forms';
 
-=======
->>>>>>> 40f9c88796efd95c1d6cac9628a7f29d088e37eb
->>>>>>> db92058f54b6d05ec40228847d57b4762a0891ff
+
 
 @NgModule({
   declarations: [
@@ -56,24 +51,18 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-<<<<<<< HEAD
     MaterialModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxChartsModule
-=======
+    NgxChartsModule,
     MatMenuModule,
     MatButtonModule,
     MatTableModule,
-<<<<<<< HEAD
     HttpClientModule,
     FormsModule,
-    MatFormFieldModule
-=======
+    MatFormFieldModule,
     HttpClientModule
->>>>>>> 40f9c88796efd95c1d6cac9628a7f29d088e37eb
->>>>>>> db92058f54b6d05ec40228847d57b4762a0891ff
   ],
   providers: [],
   bootstrap: [AppComponent]

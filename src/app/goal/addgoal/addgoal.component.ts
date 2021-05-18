@@ -58,7 +58,7 @@ export class AddgoalComponent implements OnInit {
       
     };
     if (!this.error){
-    this.goalService.createGoal(data)
+    this.goalService.create(data)
       .subscribe(response => {
         
         //console.log(response); 
