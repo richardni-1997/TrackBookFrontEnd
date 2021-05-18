@@ -44,4 +44,17 @@ table {
   
   .example-element-description-attribution {
     opacity: 0.5;
+<<<<<<< HEAD
+=======
+  }
+
+  #progress-bar{
+    position: relative;
+  }
+  
+  #progress-text{
+    position: absolute;
+    top: 8px;
+    left: 45%;
+>>>>>>> aff5fe5ec3dfff3496a7f6b6c94de49c8aea56d5
   }

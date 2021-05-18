@@ -13,5 +13,9 @@ private baseUrl= 'http://localhost:8081/api/goals';
     return this.http.get(`${this.baseUrl}`);
   }
     
+<<<<<<< HEAD
+  }
+=======
   }
 
+>>>>>>> aff5fe5ec3dfff3496a7f6b6c94de49c8aea56d5
