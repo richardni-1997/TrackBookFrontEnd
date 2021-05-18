@@ -21,6 +21,7 @@ div.card {
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+<<<<<<< HEAD
 .ng-valid[required], .ng-valid.required {
   border-left: 5px solid #42A948;
 }
@@ -28,3 +29,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .ng-invalid:not(form) {
   border-left: 5px solid #a94442;
 }
+=======
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+>>>>>>> aff5fe5ec3dfff3496a7f6b6c94de49c8aea56d5

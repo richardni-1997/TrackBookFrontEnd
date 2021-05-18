@@ -19,6 +19,7 @@ export class EditGoalComponent implements OnInit {
     private goalService: GoalService,
     private route: ActivatedRoute,
     private router: Router) { }
+<<<<<<< HEAD
 
 
     ngOnInit(): void {
@@ -43,6 +44,32 @@ export class EditGoalComponent implements OnInit {
     };
 
 
+=======
+
+
+    ngOnInit(): void {
+      this.message = '';
+      this.getGoal(this.route.snapshot.paramMap.get('id'));
+      console.log(this.currentGoal);
+    }
+
+    getGoal(id): void {
+      console.log(id);
+      this.goalService.getById(id)
+        .subscribe(
+          data => {
+            this.currentGoal = data;
+            console.log(data);
+            console.log(this.currentGoal);
+          },
+          error => {
+            console.log(error);
+          }
+        )
+    };
+
+
+>>>>>>> aff5fe5ec3dfff3496a7f6b6c94de49c8aea56d5
     //currentGoal is currently not changing, it is not getting user input changes, causes the update button to
     //do nothing to the data entry. not knowing where to push my changes to a specific id.
     updateGoal(): void {
@@ -58,4 +85,8 @@ export class EditGoalComponent implements OnInit {
         )
     };
 
+<<<<<<< HEAD
   }
+=======
+  }
+>>>>>>> aff5fe5ec3dfff3496a7f6b6c94de49c8aea56d5

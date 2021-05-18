@@ -1,0 +1,22 @@
+
+<!-- <ngx-charts-pie-grid
+    [view]="[1000, 300]"
+    
+    [results]="goalsArray1"
+  
+    [label] = "'Savings'">
+</ngx-charts-pie-grid> -->
+  
+<ngx-charts-bar-vertical 
+[view]="[1000,400]"
+[results]="goalsArray1"
+[xAxisLabel]="'goals'"
+[legendTitle]="'Product Sale Chart'"
+[yAxisLabel]="'savings'"
+[legend]="true"
+[showXAxisLabel]="true"
+[showYAxisLabel]="true"
+[xAxis]="true"
+[yAxis]="true"
+[gradient]="true">
+</ngx-charts-bar-vertical>

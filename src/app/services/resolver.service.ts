@@ -14,4 +14,8 @@ export class ResolverService implements Resolve<any> {
   }
   
   constructor(private goalService: GoalService) { }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> aff5fe5ec3dfff3496a7f6b6c94de49c8aea56d5

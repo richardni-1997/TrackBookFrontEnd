@@ -1,1 +1,24 @@
-<router-outlet></router-outlet>
+<mat-icon aria-hidden="false" aria-label="Example home icon" routerLink="">home</mat-icon>
+
+ <button mat-button [matMenuTriggerFor]="aboveMenu">Goals</button>
+<mat-menu #aboveMenu="matMenu" yPosition="above">
+  <button mat-menu-item routerLink="/goals/newgoal">Add Goal</button>
+  <button mat-menu-item routerLink="/goals">Goal List</button>
+</mat-menu>
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> e5c8ff90c059f0039fbda4eab50f13492f4d4e1f
+<button mat-button [matMenuTriggerFor]="beforeMenu">User</button>
+<mat-menu #beforeMenu="matMenu" xPosition="before">
+  <button mat-menu-item>Sign Up</button>
+  <button mat-menu-item>Login</button>
+</mat-menu>
+
+<button mat-button routerLink="/goalsChart">Progress</button>
+
+<!-- <button mat-button routerLink="">Home</button> -->
+
+ <router-outlet></router-outlet>
+

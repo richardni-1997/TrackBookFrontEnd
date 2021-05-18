@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="addgoal-component" style="width: 400px; margin: auto;"> 
     <!-- <div style="width: 400px; margin: auto;"> -->
     <div class="submit-form">
@@ -17,12 +18,37 @@
             />
             <mat-error *ngIf="email.invalid">{{getErrorEmail()}}</mat-error>
             <mat-hint>Enter email in correct format</mat-hint>
+=======
+<div class="addgoal-component" style="width: 500px; margin: auto;"> 
+    <!-- <div style="width: 400px; margin: auto;"> -->
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <form (ngSubmit)="submit()" #goalForm="ngForm" validate>
+        <div class="form-group">
+          <h4 >New Goal Form</h4>
+            <br>
+            <mat-form-field  >
+              <mat-label for="email">Email</mat-label>
+              <input matInput required
+           
+              [form-control]="email"
+              placeholder="pat@example.com"
+              [(ngModel)]="goal.email"
+              name="email" 
+            />
+            <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+            <!-- <mat-hint>Email is required</mat-hint> -->
+>>>>>>> aff5fe5ec3dfff3496a7f6b6c94de49c8aea56d5
           </mat-form-field>
        </div>
         <div class="form-group">
           
             
+<<<<<<< HEAD
           <mat-form-field>
+=======
+          <mat-form-field >
+>>>>>>> aff5fe5ec3dfff3496a7f6b6c94de49c8aea56d5
             <mat-label for="name">Goal Name</mat-label>
             <mat-select [(ngModel)]="goal.name">
             <mat-option>None</mat-option>
@@ -31,32 +57,55 @@
             <mat-option value="carloan">Car Loan</mat-option>
             <mat-option value="debt">Debt</mat-option>
             <mat-option value="emergencyfund">Emergency fund</mat-option>
+<<<<<<< HEAD
             <mat-option> value="collegefund">Invest for college</mat-option>
 
           </mat-select>
           <mat-error *ngIf="name.invalid">{{getErrorName()}}</mat-error>
+=======
+            <mat-option value="collegefund">Invest for college</mat-option>
+
+          </mat-select>
+          <!-- <mat-error *ngIf="name.invalid">{{getErrorName()}}</mat-error> -->
+>>>>>>> aff5fe5ec3dfff3496a7f6b6c94de49c8aea56d5
         </mat-form-field>
           </div>
 
         <div class="form-group">
+<<<<<<< HEAD
           <mat-form-field>
             <mat-label for="description">Goal Description</mat-label>
             <input matInput
+=======
+          <mat-form-field >
+            <mat-label for="description">Goal Description</mat-label>
+            <input matInput 
+>>>>>>> aff5fe5ec3dfff3496a7f6b6c94de49c8aea56d5
             class="form-control"
             id="description"
             
             [(ngModel)]="goal.description"
             name="description"
           />
+<<<<<<< HEAD
           <mat-hint>Enter description is required</mat-hint>
+=======
+          <!-- <mat-hint>Enter description is required</mat-hint> -->
+>>>>>>> aff5fe5ec3dfff3496a7f6b6c94de49c8aea56d5
         </mat-form-field>
         </div>
        
 
         <div class="form-group">
+<<<<<<< HEAD
           <mat-form-field>
             <mat-label for="startDate">Start Date</mat-label>
             <input matInput
+=======
+          <mat-form-field >
+            <mat-label for="startDate">Start Date</mat-label>
+            <input matInput 
+>>>>>>> aff5fe5ec3dfff3496a7f6b6c94de49c8aea56d5
               type="date"
               class="form-control"
               id="startDate"
@@ -68,7 +117,11 @@
           </div>
 
           <div class="form-group">
+<<<<<<< HEAD
             <mat-form-field>
+=======
+            <mat-form-field >
+>>>>>>> aff5fe5ec3dfff3496a7f6b6c94de49c8aea56d5
               <mat-label for="targetDate">Target Date</mat-label>
               <input matInput
               type="date"
@@ -83,7 +136,11 @@
           </div>
 
           <div class="form-group">
+<<<<<<< HEAD
             <mat-form-field>
+=======
+            <mat-form-field >
+>>>>>>> aff5fe5ec3dfff3496a7f6b6c94de49c8aea56d5
               <mat-label for="currentSavings">Current Savings</mat-label>
               <input matInput
               type="text"
@@ -93,13 +150,21 @@
               [(ngModel)]="goal.currentSavings"
               name="currentSavings"
             />
+<<<<<<< HEAD
             <span matPrefix>$&nbsp;</span>
+=======
+            <span mat-Prefix>$&nbsp;</span>
+>>>>>>> aff5fe5ec3dfff3496a7f6b6c94de49c8aea56d5
            </mat-form-field>
           </div>
 
 
           <div class="form-group">
+<<<<<<< HEAD
             <mat-form-field>
+=======
+            <mat-form-field >
+>>>>>>> aff5fe5ec3dfff3496a7f6b6c94de49c8aea56d5
               <mat-label for="targetSavings">Target Savings</mat-label>
               <input matInput
               type="text"
@@ -109,6 +174,7 @@
               [(ngModel)]="goal.targetSavings"
               name="targetSavings"
             />
+<<<<<<< HEAD
             
             </mat-form-field>
           </div>
@@ -147,6 +213,35 @@
       
       </div>
   
+=======
+            <span mat-Prefix>$&nbsp;</span>
+            </mat-form-field>
+          </div>
+
+                   
+             <mat-form-field >
+              <mat-label for="priority">Priority</mat-label>
+              <mat-select [(ngModel)]="goal.priority">
+                <mat-option>None</mat-option>
+                <mat-option value="Low">Low</mat-option>
+                <mat-option value="High">High</mat-option>
+                   
+              </mat-select>
+              </mat-form-field>
+         
+          
+          
+        <div *ngIf ="!currentSavings || !targetSavings !! !targetDate !startDate">
+        <button (click)="saveGoal()" type="submit" [disabled]="!goalForm.form.valid"
+        class="btn btn-info" style="margin-right:15px;">Submit</button>
+       <button routerLink="/goals" class="btn btn-info" style="background-color: rgb(139, 141, 18);">Home</button>
+      </div>
+    
+    
+  </form> 
+</div> 
+</div>    
+>>>>>>> aff5fe5ec3dfff3496a7f6b6c94de49c8aea56d5
       <div *ngIf="submitted">
         <h4>Goal  successfully added!</h4>
         <!-- <button mat-button class="btn btn-success" (click)="newGoal()" style="margin-right: 15px;">Add</button> -->
@@ -155,5 +250,11 @@
           Add New Goal
         </button>
       </div>
+<<<<<<< HEAD
     </div>
   </div>
+=======
+     
+  
+    </div>
+>>>>>>> aff5fe5ec3dfff3496a7f6b6c94de49c8aea56d5
