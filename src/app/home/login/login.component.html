@@ -1,8 +1,9 @@
-<div class="row">
+<div class="login" style="width: 400px; margin: auto;">
     <div class="col-md-6 offset-md-3 mt-4">
+        <div *ngIf="!isLoggedIn">
+
         <h3>Login</h3>
         <form >
-
             <div class="form-group">
                 <label for="email">Username</label>
                 <input type="text" 
@@ -27,14 +28,18 @@
                        placeholder="Password"
                        value="password">
             </div>
-            <div class="form-group form-check">
-                <a [routerLink]="['/reset-password']">Forgot Password</a>
-            </div>
+            
             <button (click)="checkLogin(user.email)"
                     class="btn btn-primary">Login <i class="fas fa-sign-in-alt"></i></button>
         </form>
-        <div *ngIf="isLoggedIn">
-            <h3>Logged in successfully</h3>
-        </div>
     </div>
+
+        <div *ngIf="isLoggedIn">
+                <h4>Login Successful</h4>
+                <!-- <button mat-button class="btn btn-success" (click)="newGoal()" style="margin-right: 15px;">Add</button> -->
+                <button mat-button class="btn btn-success" routerLink="" style="background-color: rgb(182, 182, 182); margin-right: 15px;">User Home</button>
+                <button mat-button class="btn btn-success" routerLink="/goals" style="background-color:rgb(182, 182, 182)">
+                  View Goals
+                </button>
+        </div>
 </div>
