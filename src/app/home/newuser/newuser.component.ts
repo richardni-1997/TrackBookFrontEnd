@@ -16,11 +16,13 @@ export class NewuserComponent implements OnInit {
   user = {
     email:null,
     password:null,
+    confirmPassword:null,
   }
  error: boolean=false;
   
   email = new FormControl('', [Validators.required, Validators.email]);
   password= new FormControl('',[Validators.required]);
+  confirmPassword = new FormControl('',[Validators.required]);
 
   constructor(private userService: UserService) { }
 
@@ -56,7 +58,8 @@ export class NewuserComponent implements OnInit {
     this.submitted = false;
     this.user = {
       email:'',
-      password:''
+      password:'',
+      confirmPassword:''
     };
   }
 
