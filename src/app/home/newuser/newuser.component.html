@@ -60,24 +60,43 @@
             id="password"
             #password="ngModel"
             
+            [form-control]="password"
+              required
             [(ngModel)]="user.password"
-            name="description"
+            name="password"
           />
         </mat-form-field>
     </div>
+
+    <div class="form-group">
+        <mat-form-field>
+          <mat-label for="confirmPassword">Confirm Password</mat-label>
+          <input type="password" 
+          matInput
+          class="form-control"
+          id="confirmPassword"
+          #password="ngModel"
+          
+          [form-control]="confirmPassword"
+              required
+          [(ngModel)]="user.confirmPassword"
+          name="confirmPassword"
+        />
+      </mat-form-field>
+  </div>
         
         <button (click)="saveUser()" class="btn btn-info" style="margin-right:15px;">Submit</button>
         
         <!-- <button type="submit" [disabled]="!addgoal-component" class="btn btn-success"
         style="margin-right:15px;" >Submit</button>  -->
-        <button routerLink="/users" class="btn btn-info" style="background-color: rgb(139, 141, 18);">Home</button>
+        <button routerLink="" class="btn btn-info" style="margin-right:15px;">Home</button>
       </div>
   
       <div *ngIf="submitted">
         <h4>User successfully registered!</h4>
         <!-- <button mat-button class="btn btn-success" (click)="newGoal()" style="margin-right: 15px;">Add</button> -->
-        <button mat-button class="btn btn-success" routerLink="/users" style="background-color: grey; margin-right: 15px;">User Home</button>
-        <button mat-button class="btn btn-success" routerLink="/users/newuser" style="background-color:rgb(57, 57, 145)">
+        <button mat-button class="btn btn-success" routerLink="" style="background-color: grey; margin-right: 15px;">User Home</button>
+        <button mat-button class="btn btn-success" routerLink="signup" style="background-color:rgb(57, 57, 145)">
           Add New User
         </button>
       </div>
